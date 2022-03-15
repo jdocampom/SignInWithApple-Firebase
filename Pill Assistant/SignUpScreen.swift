@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SignUpScreen.swift
 //  Pill Assistant
 //
 //  Created by Juan Diego Ocampo on 15/03/22.
@@ -8,49 +8,51 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct SignUpScreen: View {
     
     @State private var email: String = ""
     @State private var password: String = ""
     
     var body: some View {
-        Group {
-            ZStack {
-                GradientBackground()
-                ZStack(alignment: .top) {
-                    VStack(alignment: .leading, spacing: 20) {
-                        Spacer().frame(height: 48)
-                        SignUpTitle(text: "Sign Up")
-                        SignUpLabel(text: "Keep track of your medicine cabinet and never miss a dose again!")
-                        EmailTextField(with: $email)
-                        PasswordTextField(with: $password)
-                        SignUpButton(action: signUpTapped)
-                        RedirectToSignInViewButton(action: redirectToSignInTapped)
-                    }
-                    .padding()
-                    .frame(width: UIScreen.main.bounds.width - 32)
-                    .background(Color(.secondarySystemBackground))
-                    .clipShape(RoundedRectangle(cornerRadius: 30))
-                    .opacity(0.85)
-                    .shadow(radius: 250)
-                    OverlayedAppIcon()
+        ZStack(alignment: .center) {
+            GradientBackground()
+            ZStack(alignment: .top) {
+                VStack(alignment: .leading, spacing: 20) {
+                    Spacer().frame(height: 48)
+                    SignUpTitle(text: "Sign Up")
+                    SignUpLabel(text: "Keep track of your medicine cabinet and never miss a dose again!")
+                    EmailTextField(with: $email)
+                    PasswordTextField(with: $password)
+                    SignUpButton(action: signUpTapped)
+                    HStack { Spacer(); Text("or").opacity(0.85).font(.subheadline) ; Spacer() }
+                    SignInWithAppleButton(action: signUpWithAppleTapped)
+                    Divider()
+                    RedirectToSignInViewButton(action: redirectToSignInTapped)
                 }
+                .padding()
+                .frame(width: 280+64)
+                .background(Color(.secondarySystemBackground))
+                .clipShape(RoundedRectangle(cornerRadius: 30))
+                .opacity(0.85)
+                .shadow(radius: 250)
+                OverlayedAppIcon()
             }
         }
     }
 }
 
-extension ContentView {
+extension SignUpScreen {
     func signUpTapped() { print("signUpTapped") }
-    func redirectToSignInTapped() { print("redirectToSignInTapped") }
+    func signUpWithAppleTapped() { print("signUpWithAppleTapped") }
+    func redirectToSignInTapped() { SignInScreen() }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SignUpScreen()
             .preferredColorScheme(.light)
             .statusBar(hidden: false)
-        ContentView()
+        SignUpScreen()
             .preferredColorScheme(.dark)
             .statusBar(hidden: false)
     }
@@ -60,7 +62,7 @@ struct EmailTextField: View {
     @Binding var email: String
     var body: some View {
         HStack(spacing: 12) {
-            Image(systemName: "envelope.fill")
+            Image(systemName: "envelope.open.fill")
             TextField("Email Address", text: $email)
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
@@ -92,10 +94,31 @@ struct SignUpLabel: View {
     var text: String
     var body: some View {
         Text(text)
+            .multilineTextAlignment(.center)
             .opacity(0.85)
             .minimumScaleFactor(0.75)
             .lineLimit(2)
             .padding(.horizontal)
+    }
+}
+
+struct SignInWithAppleButton: View {
+    @Environment(\.colorScheme) var colorScheme
+    var action: () -> Void
+    var body: some View {
+        HStack {
+            Spacer()
+            Button(action: action) {
+                Label("Sign in with Apple", systemImage: "applelogo")
+                    .padding()
+                    .font(.title3)
+                    .frame(width: 280, height: 44)
+                    .foregroundColor(colorScheme == .light ? Color.white: Color.black)
+                    .background(colorScheme == .light ? Color.black: Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+            }
+            Spacer()
+        }
     }
 }
 
@@ -108,7 +131,8 @@ struct SignUpButton: View {
                 Text("Sign Up").bold()
                     .padding()
                     .font(.title3)
-                    .frame(width: UIScreen.main.bounds.width - 64, height:  48)
+                    .frame(width: 280, height: 44)
+                //                    .frame(width: UIScreen.main.bounds.width - 64, height:  48)
                     .foregroundColor(Color.white)
                     .background(Color.red)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -125,6 +149,7 @@ struct RedirectToSignInViewButton: View {
             Spacer()
             Text("Already have an account?")
                 .font(.subheadline)
+                .opacity(0.85)
             Button(action: action) {
                 Text("Sign In")
                     .foregroundColor(Color.red)

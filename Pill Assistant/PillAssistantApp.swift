@@ -13,7 +13,7 @@ struct Pill_AssistantApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SignUpScreen()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

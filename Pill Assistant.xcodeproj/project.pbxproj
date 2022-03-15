@@ -8,25 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		86810C0627E123F300DE48A8 /* PillAssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C0527E123F300DE48A8 /* PillAssistantApp.swift */; };
-		86810C0827E123F300DE48A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C0727E123F300DE48A8 /* ContentView.swift */; };
+		86810C0827E123F300DE48A8 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C0727E123F300DE48A8 /* SignUpScreen.swift */; };
 		86810C0A27E123F500DE48A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86810C0927E123F500DE48A8 /* Assets.xcassets */; };
 		86810C0D27E123F500DE48A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86810C0C27E123F500DE48A8 /* Preview Assets.xcassets */; };
 		86810C0F27E123F500DE48A8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C0E27E123F500DE48A8 /* Persistence.swift */; };
 		86810C1227E123F500DE48A8 /* PillAssistant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86810C1027E123F500DE48A8 /* PillAssistant.xcdatamodeld */; };
 		86810C1927E125F400DE48A8 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C1827E125F400DE48A8 /* Template.swift */; };
 		86810C1B27E13E0000DE48A8 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C1A27E13E0000DE48A8 /* Color+Ext.swift */; };
+		86810C1D27E14F9600DE48A8 /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C1C27E14F9600DE48A8 /* SignInScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		86810C0227E123F300DE48A8 /* Pill Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pill Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86810C0527E123F300DE48A8 /* PillAssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillAssistantApp.swift; sourceTree = "<group>"; };
-		86810C0727E123F300DE48A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		86810C0727E123F300DE48A8 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		86810C0927E123F500DE48A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86810C0C27E123F500DE48A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		86810C0E27E123F500DE48A8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		86810C1127E123F500DE48A8 /* Pill_Assistant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pill_Assistant.xcdatamodel; sourceTree = "<group>"; };
 		86810C1827E125F400DE48A8 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		86810C1A27E13E0000DE48A8 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		86810C1C27E14F9600DE48A8 /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				86810C0527E123F300DE48A8 /* PillAssistantApp.swift */,
-				86810C0727E123F300DE48A8 /* ContentView.swift */,
+				86810C1C27E14F9600DE48A8 /* SignInScreen.swift */,
+				86810C0727E123F300DE48A8 /* SignUpScreen.swift */,
 				86810C0927E123F500DE48A8 /* Assets.xcassets */,
 				86810C0E27E123F500DE48A8 /* Persistence.swift */,
 				86810C1027E123F500DE48A8 /* PillAssistant.xcdatamodeld */,
@@ -152,7 +155,8 @@
 				86810C1927E125F400DE48A8 /* Template.swift in Sources */,
 				86810C0F27E123F500DE48A8 /* Persistence.swift in Sources */,
 				86810C1227E123F500DE48A8 /* PillAssistant.xcdatamodeld in Sources */,
-				86810C0827E123F300DE48A8 /* ContentView.swift in Sources */,
+				86810C1D27E14F9600DE48A8 /* SignInScreen.swift in Sources */,
+				86810C0827E123F300DE48A8 /* SignUpScreen.swift in Sources */,
 				86810C0627E123F300DE48A8 /* PillAssistantApp.swift in Sources */,
 				86810C1B27E13E0000DE48A8 /* Color+Ext.swift in Sources */,
 			);
