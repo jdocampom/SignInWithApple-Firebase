@@ -7,22 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		86810C0627E123F300DE48A8 /* Pill_AssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C0527E123F300DE48A8 /* Pill_AssistantApp.swift */; };
+		86810C0627E123F300DE48A8 /* PillAssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C0527E123F300DE48A8 /* PillAssistantApp.swift */; };
 		86810C0827E123F300DE48A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C0727E123F300DE48A8 /* ContentView.swift */; };
 		86810C0A27E123F500DE48A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86810C0927E123F500DE48A8 /* Assets.xcassets */; };
 		86810C0D27E123F500DE48A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86810C0C27E123F500DE48A8 /* Preview Assets.xcassets */; };
 		86810C0F27E123F500DE48A8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C0E27E123F500DE48A8 /* Persistence.swift */; };
-		86810C1227E123F500DE48A8 /* Pill_Assistant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86810C1027E123F500DE48A8 /* Pill_Assistant.xcdatamodeld */; };
+		86810C1227E123F500DE48A8 /* PillAssistant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86810C1027E123F500DE48A8 /* PillAssistant.xcdatamodeld */; };
+		86810C1927E125F400DE48A8 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C1827E125F400DE48A8 /* Template.swift */; };
+		86810C1B27E13E0000DE48A8 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C1A27E13E0000DE48A8 /* Color+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		86810C0227E123F300DE48A8 /* Pill Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pill Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		86810C0527E123F300DE48A8 /* Pill_AssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pill_AssistantApp.swift; sourceTree = "<group>"; };
+		86810C0527E123F300DE48A8 /* PillAssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillAssistantApp.swift; sourceTree = "<group>"; };
 		86810C0727E123F300DE48A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		86810C0927E123F500DE48A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86810C0C27E123F500DE48A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		86810C0E27E123F500DE48A8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		86810C1127E123F500DE48A8 /* Pill_Assistant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pill_Assistant.xcdatamodel; sourceTree = "<group>"; };
+		86810C1827E125F400DE48A8 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		86810C1A27E13E0000DE48A8 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +59,14 @@
 		86810C0427E123F300DE48A8 /* Pill Assistant */ = {
 			isa = PBXGroup;
 			children = (
-				86810C0527E123F300DE48A8 /* Pill_AssistantApp.swift */,
+				86810C0527E123F300DE48A8 /* PillAssistantApp.swift */,
 				86810C0727E123F300DE48A8 /* ContentView.swift */,
 				86810C0927E123F500DE48A8 /* Assets.xcassets */,
 				86810C0E27E123F500DE48A8 /* Persistence.swift */,
-				86810C1027E123F500DE48A8 /* Pill_Assistant.xcdatamodeld */,
+				86810C1027E123F500DE48A8 /* PillAssistant.xcdatamodeld */,
 				86810C0B27E123F500DE48A8 /* Preview Content */,
+				86810C1827E125F400DE48A8 /* Template.swift */,
+				86810C1A27E13E0000DE48A8 /* Color+Ext.swift */,
 			);
 			path = "Pill Assistant";
 			sourceTree = "<group>";
@@ -143,10 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86810C1927E125F400DE48A8 /* Template.swift in Sources */,
 				86810C0F27E123F500DE48A8 /* Persistence.swift in Sources */,
-				86810C1227E123F500DE48A8 /* Pill_Assistant.xcdatamodeld in Sources */,
+				86810C1227E123F500DE48A8 /* PillAssistant.xcdatamodeld in Sources */,
 				86810C0827E123F300DE48A8 /* ContentView.swift in Sources */,
-				86810C0627E123F300DE48A8 /* Pill_AssistantApp.swift in Sources */,
+				86810C0627E123F300DE48A8 /* PillAssistantApp.swift in Sources */,
+				86810C1B27E13E0000DE48A8 /* Color+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +290,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +320,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -349,13 +359,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		86810C1027E123F500DE48A8 /* Pill_Assistant.xcdatamodeld */ = {
+		86810C1027E123F500DE48A8 /* PillAssistant.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				86810C1127E123F500DE48A8 /* Pill_Assistant.xcdatamodel */,
 			);
 			currentVersion = 86810C1127E123F500DE48A8 /* Pill_Assistant.xcdatamodel */;
-			path = Pill_Assistant.xcdatamodeld;
+			path = PillAssistant.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
