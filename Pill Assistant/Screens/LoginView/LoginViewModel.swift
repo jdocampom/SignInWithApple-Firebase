@@ -38,6 +38,8 @@ extension LoginView {
                     return
                 }
                 print("✅ USER SIGNED UP SUCCESSFULLY - LoginViewModel - signUpUser() ✅")
+                self.email = ""
+                self.password = ""
                 HapticManager.playSuccessHaptic()
             }
         }
@@ -54,6 +56,8 @@ extension LoginView {
                     return
                 }
                 print("✅ USER LOGGED IN SUCCESSFULLY - LoginViewModel - logInUser() ✅")
+                self.email = ""
+                self.password = ""
                 HapticManager.playSuccessHaptic()
             }
         }

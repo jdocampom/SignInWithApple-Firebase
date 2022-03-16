@@ -11,17 +11,19 @@ import Firebase
 struct TestScreen: View {
     
     @State private var returnToLoginView = false
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         Button("Sign Out") {
             do {
                 try Auth.auth().signOut()
-                returnToLoginView.toggle()
-            } catch {
+                presentationMode.wrappedValue.dismiss()
+//                returnToLoginView.toggle()
+            } catch let error {
                 print(error.localizedDescription)
             }
         }
-        .fullScreenCover(isPresented: $returnToLoginView) { LoginView() }
+//        .fullScreenCover(isPresented: $returnToLoginView) { LoginView() }
     }
 }
 
