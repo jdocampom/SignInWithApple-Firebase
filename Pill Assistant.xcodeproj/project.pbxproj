@@ -14,6 +14,7 @@
 		8632F6C327E2365300711B8E /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8632F6C227E2365300711B8E /* HapticsManager.swift */; };
 		8632F6C527E2439B00711B8E /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8632F6C427E2439B00711B8E /* TestScreen.swift */; };
 		8632F6CD27E284A500711B8E /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8632F6CC27E284A500711B8E /* SignInWithApple.swift */; };
+		8632F6D027E29B5600711B8E /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 8632F6CF27E29B5600711B8E /* RevenueCat */; };
 		8660A2E327E1603F0019698B /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8660A2E227E1603F0019698B /* Buttons.swift */; };
 		8660A2E527E1616B0019698B /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8660A2E427E1616B0019698B /* Labels.swift */; };
 		8660A2E727E162CF0019698B /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8660A2E627E162CF0019698B /* TextFields.swift */; };
@@ -62,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8632F6D027E29B5600711B8E /* RevenueCat in Frameworks */,
 				8632F6BB27E22F3100711B8E /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +190,7 @@
 			name = "Pill Assistant";
 			packageProductDependencies = (
 				8632F6BA27E22F3100711B8E /* FirebaseAuth */,
+				8632F6CF27E29B5600711B8E /* RevenueCat */,
 			);
 			productName = "Pill Assistant";
 			productReference = 86810C0227E123F300DE48A8 /* Pill Assistant.app */;
@@ -219,6 +222,7 @@
 			mainGroup = 86810BF927E123F300DE48A8;
 			packageReferences = (
 				8632F6B927E22F3100711B8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8632F6CE27E29B5600711B8E /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			productRefGroup = 86810C0327E123F300DE48A8 /* Products */;
 			projectDirPath = "";
@@ -479,6 +483,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		8632F6CE27E29B5600711B8E /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -486,6 +498,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8632F6B927E22F3100711B8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		8632F6CF27E29B5600711B8E /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8632F6CE27E29B5600711B8E /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
 		};
 /* End XCSwiftPackageProductDependency section */
 
