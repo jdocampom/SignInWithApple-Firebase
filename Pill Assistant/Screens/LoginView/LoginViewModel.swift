@@ -14,6 +14,8 @@ extension LoginView {
         
         private let generator = UISelectionFeedbackGenerator()
         
+        @Published var rotationAngle = 0.0
+        
         @Published var email: String = ""
         @Published var password: String = ""
         
@@ -22,25 +24,38 @@ extension LoginView {
         
         @Published var alertItem: AlertItem?
         
+        @Published var signInWithAppleManager = SignInWithApple()
+        
         internal func signUpUser() {
             generator.selectionChanged()
             Auth.auth().createUser(withEmail: self.email, password: self.password) { [self] result, error in
                 guard error == nil else {
                     let errorMessage =  String(describing: error!.localizedDescription)
-                    print("❌ ERROR - SignUpScreenViewModel - signUp(): \(errorMessage) ❌")
+                    print("❌ ERROR - LoginViewModel - signUpUser(): \(errorMessage) ❌")
                     AlertContext.errorCreatingProfile.message = Text("\n\(errorMessage)")
                     HapticManager.playErrorHaptic()
                     alertItem = AlertContext.errorCreatingProfile
                     return
                 }
-                print("✅ USER SIGNED UP SUCCESSFULLY - SignUpScreenViewModel - signUp() ✅")
+                print("✅ USER SIGNED UP SUCCESSFULLY - LoginViewModel - signUpUser() ✅")
                 HapticManager.playSuccessHaptic()
             }
         }
         
         internal func logInUser() {
             generator.selectionChanged()
-            print("logInUser")
+            Auth.auth().signIn(withEmail: self.email, password: self.password) { [self] result, error in
+                guard error == nil else {
+                    let errorMessage =  String(describing: error!.localizedDescription)
+                    print("❌ ERROR - LoginViewModel - logInUser(): \(errorMessage) ❌")
+                    AlertContext.errorCreatingProfile.message = Text("\n\(errorMessage)")
+                    HapticManager.playErrorHaptic()
+                    alertItem = AlertContext.errorCreatingProfile
+                    return
+                }
+                print("✅ USER LOGGED IN SUCCESSFULLY - LoginViewModel - logInUser() ✅")
+                HapticManager.playSuccessHaptic()
+            }
         }
         
         internal func checkForActiveSession() {
@@ -53,7 +68,8 @@ extension LoginView {
             }
         }
         
-        internal func signUpWithAppleTapped() { print("signUpWithAppleTapped") }
+        internal func signUpWithAppleTapped() { signInWithAppleManager.signInWithApple() }
+        internal func signInWithAppleTapped() { signInWithAppleManager.signInWithApple() }
         internal func resetPasswordTapped() { print("resetPasswordTapped") }
         
     }

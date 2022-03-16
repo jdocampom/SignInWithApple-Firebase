@@ -13,6 +13,7 @@
 		8632F6C127E232F300711B8E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8632F6C027E232F300711B8E /* LoginViewModel.swift */; };
 		8632F6C327E2365300711B8E /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8632F6C227E2365300711B8E /* HapticsManager.swift */; };
 		8632F6C527E2439B00711B8E /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8632F6C427E2439B00711B8E /* TestScreen.swift */; };
+		8632F6CD27E284A500711B8E /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8632F6CC27E284A500711B8E /* SignInWithApple.swift */; };
 		8660A2E327E1603F0019698B /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8660A2E227E1603F0019698B /* Buttons.swift */; };
 		8660A2E527E1616B0019698B /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8660A2E427E1616B0019698B /* Labels.swift */; };
 		8660A2E727E162CF0019698B /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8660A2E627E162CF0019698B /* TextFields.swift */; };
@@ -36,6 +37,8 @@
 		8632F6C027E232F300711B8E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8632F6C227E2365300711B8E /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		8632F6C427E2439B00711B8E /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
+		8632F6CB27E2844E00711B8E /* Pill Assistant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pill Assistant.entitlements"; sourceTree = "<group>"; };
+		8632F6CC27E284A500711B8E /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithApple.swift; sourceTree = "<group>"; };
 		8660A2E227E1603F0019698B /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		8660A2E427E1616B0019698B /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		8660A2E627E162CF0019698B /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 				86810C0E27E123F500DE48A8 /* Persistence.swift */,
 				86810C1827E125F400DE48A8 /* Template.swift */,
 				8660A2F127E204040019698B /* AlertItem.swift */,
+				8632F6CC27E284A500711B8E /* SignInWithApple.swift */,
 			);
 			path = Utilties;
 			sourceTree = "<group>";
@@ -142,6 +146,7 @@
 		86810C0427E123F300DE48A8 /* Pill Assistant */ = {
 			isa = PBXGroup;
 			children = (
+				8632F6CB27E2844E00711B8E /* Pill Assistant.entitlements */,
 				86810C0527E123F300DE48A8 /* PillAssistantApp.swift */,
 				8632F6C427E2439B00711B8E /* TestScreen.swift */,
 				86810C0927E123F500DE48A8 /* Assets.xcassets */,
@@ -258,6 +263,7 @@
 				8660A2EC27E16FA80019698B /* View+Ext.swift in Sources */,
 				86810C0627E123F300DE48A8 /* PillAssistantApp.swift in Sources */,
 				86810C1B27E13E0000DE48A8 /* Color+Ext.swift in Sources */,
+				8632F6CD27E284A500711B8E /* SignInWithApple.swift in Sources */,
 				8660A2E327E1603F0019698B /* Buttons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Pill Assistant/Pill Assistant.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pill Assistant/Preview Content\"";
@@ -414,6 +421,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Pill Assistant/Pill Assistant.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pill Assistant/Preview Content\"";

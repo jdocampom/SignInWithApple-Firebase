@@ -13,8 +13,9 @@ import Firebase
 
 struct LoginView: View {
     
+    @Environment(\.colorScheme) private var colorScheme
     @StateObject private var viewModel = LoginViewModel()
-    
+
     var body: some View {
         ZStack(alignment: .center) {
             viewModel.showingSignUpScreen ? GradientBackground() : GradientBackground()
@@ -35,29 +36,43 @@ struct LoginView: View {
                         } label: {
                             LoginButton(label: viewModel.showingSignUpScreen ? "Create Account" : "Log In")
                         }
-//                        .onAppear(perform: viewModel.checkForActiveSession)
                         LoginDivider()
-                        SignInWithAppleButton(context: viewModel.showingSignUpScreen ? .signUp : .signIn,
-                                              action: viewModel.signUpWithAppleTapped)
+                        HStack {
+                            Spacer()
+                            Button {
+                                viewModel.showingSignUpScreen ? viewModel.signUpWithAppleTapped() : viewModel.signInWithAppleTapped()
+                            } label: {
+                                SignInWithAppleButtonView(appearance: colorScheme)
+                            }
+                            Spacer()
+                        }
                         Divider()
                         if !viewModel.showingSignUpScreen {
                             PARedirectButton(label: "Forgot your password?", text: "Reset Password", action: viewModel.resetPasswordTapped)
                             Spacer().frame(height: 6)
                         }
-                        PARedirectButton(label: viewModel.showingSignUpScreen ? "Already have an account?" : "Don't have an account?", text: viewModel.showingSignUpScreen ? "Log In" : "Register") { viewModel.showingSignUpScreen.toggle() }
+                        PARedirectButton(label: viewModel.showingSignUpScreen ? "Already have an account?" : "Don't have an account?", text: viewModel.showingSignUpScreen ? "Log In" : "Register") {
+                            withAnimation(.linear(duration: 0.75)) {
+                                viewModel.showingSignUpScreen.toggle()
+                                viewModel.rotationAngle += 180
+                            }
+                        }
                     }
                 }
+                .rotation3DEffect(Angle(degrees: viewModel.rotationAngle), axis: (x: 0.0, y: 1.0, z: 0.0))
                 .padding()
                 .frame(width: 280+64)
                 .background(Color(.secondarySystemBackground))
                 .clipShape(RoundedRectangle(cornerRadius: 30))
                 .opacity(0.85)
                 .shadow(radius: 250)
+                .rotation3DEffect(Angle(degrees: viewModel.rotationAngle), axis: (x: 0.0, y: 1.0, z: 0.0))
                 OverlayedAppIcon()
             }
         }
         .alert(item: $viewModel.alertItem, content: { $0.alert })
         .fullScreenCover(isPresented: $viewModel.redirectToHomeScreen) { TestScreen() }
+        //        .onAppear(perform: viewModel.checkForActiveSession)
     }
 }
 

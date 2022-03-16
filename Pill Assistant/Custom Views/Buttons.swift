@@ -5,11 +5,8 @@
 //  Created by Juan Diego Ocampo on 15/03/22.
 //
 
+import AuthenticationServices
 import SwiftUI
-
-enum SignInWithAppleButtonContext {
-    case signIn, signUp
-}
 
 struct PAButton: View {
     private let generator = UISelectionFeedbackGenerator()
@@ -27,27 +24,6 @@ struct PAButton: View {
                     .background(Color.red)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .onTapGesture { generator.selectionChanged() }
-            }
-            Spacer()
-        }
-    }
-}
-
-struct PALoginButton: View {
-    private let generator = UISelectionFeedbackGenerator()
-    var text: String
-    var action: () -> Void
-    var body: some View {
-        HStack {
-            Spacer()
-            Button(action: action) {
-                Text(text).bold()
-                    .padding()
-                    .font(.title3)
-                    .frame(width: 280, height: 44)
-                    .foregroundColor(Color.white)
-                    .background(Color.red)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
             }
             Spacer()
         }
@@ -91,26 +67,31 @@ struct LoginButton: View {
     }
 }
 
-struct SignInWithAppleButton: View {
-    private let generator = UISelectionFeedbackGenerator()
-    @Environment(\.colorScheme) var colorScheme
-    var context: SignInWithAppleButtonContext
-    var action: () -> Void
+struct SignUpWithAppleButtonView: View {
+    var appearance: ColorScheme
     var body: some View {
-        HStack {
-            Spacer()
-            Button(action: action) {
-                Label(context == .signIn ? "Sign in with Apple" : "Sign up with Apple", systemImage: "applelogo")
-                    .padding()
-                    .font(.title3)
-                    .frame(width: 280, height: 44)
-                    .foregroundColor(colorScheme == .light ? Color.white: Color.black)
-                    .background(colorScheme == .light ? Color.black: Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .onTapGesture { generator.selectionChanged() }
-            }
-            Spacer()
-        }
+        SignInWithAppleButton(
+            .signUp,
+            onRequest: {_ in },
+            onCompletion: {_ in }
+        )
+        .frame(width: 280, height: 44)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .signInWithAppleButtonStyle(appearance == .dark ? .white : .black)
+    }
+}
+
+struct SignInWithAppleButtonView: View {
+    var appearance: ColorScheme
+    var body: some View {
+        SignInWithAppleButton(
+            .signIn,
+            onRequest: {_ in },
+            onCompletion: {_ in }
+        )
+        .frame(width: 280, height: 44)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .signInWithAppleButtonStyle(appearance == .dark ? .white : .black)
     }
 }
 
@@ -122,7 +103,5 @@ struct Buttons_Previews: PreviewProvider {
         PAButton(text: "Button", action: {}).fitPreviewOnDarkMode()
         PARedirectButton(label: "Label Text", text: "Button", action: {}).fitPreviewOnLightMode()
         PARedirectButton(label: "Label Text", text: "Button", action: {}).fitPreviewOnDarkMode()
-        SignInWithAppleButton(context: .signIn, action: {}).fitPreviewOnLightMode()
-        SignInWithAppleButton(context: .signUp, action: {}).fitPreviewOnDarkMode()
     }
 }
