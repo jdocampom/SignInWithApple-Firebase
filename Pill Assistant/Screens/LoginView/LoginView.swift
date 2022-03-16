@@ -72,7 +72,7 @@ struct LoginView: View {
         }
         .alert(item: $viewModel.alertItem, content: { $0.alert })
         .fullScreenCover(isPresented: $viewModel.redirectToHomeScreen) { TestScreen() }
-        //        .onAppear(perform: viewModel.checkForActiveSession)
+        .onAppear(perform: viewModel.checkForActiveSession)
     }
 }
 

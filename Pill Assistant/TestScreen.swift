@@ -6,10 +6,22 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct TestScreen: View {
+    
+    @State private var returnToLoginView = false
+    
     var body: some View {
-        Text("Hello, World!")
+        Button("Sign Out") {
+            do {
+                try Auth.auth().signOut()
+                returnToLoginView.toggle()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        .fullScreenCover(isPresented: $returnToLoginView) { LoginView() }
     }
 }
 
