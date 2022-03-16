@@ -15,6 +15,7 @@
 		8632F6C527E2439B00711B8E /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8632F6C427E2439B00711B8E /* TestScreen.swift */; };
 		8632F6CD27E284A500711B8E /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8632F6CC27E284A500711B8E /* SignInWithApple.swift */; };
 		8632F6D027E29B5600711B8E /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 8632F6CF27E29B5600711B8E /* RevenueCat */; };
+		8632F6D327E29C8E00711B8E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8632F6D227E29C8E00711B8E /* StoreKit.framework */; };
 		8660A2E327E1603F0019698B /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8660A2E227E1603F0019698B /* Buttons.swift */; };
 		8660A2E527E1616B0019698B /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8660A2E427E1616B0019698B /* Labels.swift */; };
 		8660A2E727E162CF0019698B /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8660A2E627E162CF0019698B /* TextFields.swift */; };
@@ -40,6 +41,7 @@
 		8632F6C427E2439B00711B8E /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
 		8632F6CB27E2844E00711B8E /* Pill Assistant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pill Assistant.entitlements"; sourceTree = "<group>"; };
 		8632F6CC27E284A500711B8E /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithApple.swift; sourceTree = "<group>"; };
+		8632F6D227E29C8E00711B8E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8660A2E227E1603F0019698B /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		8660A2E427E1616B0019698B /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		8660A2E627E162CF0019698B /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8632F6D327E29C8E00711B8E /* StoreKit.framework in Frameworks */,
 				8632F6D027E29B5600711B8E /* RevenueCat in Frameworks */,
 				8632F6BB27E22F3100711B8E /* FirebaseAuth in Frameworks */,
 			);
@@ -87,6 +90,14 @@
 				86810C0727E123F300DE48A8 /* LoginView.swift */,
 			);
 			path = LoginView;
+			sourceTree = "<group>";
+		};
+		8632F6D127E29C8E00711B8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8632F6D227E29C8E00711B8E /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8660A2E127E160320019698B /* Custom Views */ = {
@@ -134,6 +145,7 @@
 			children = (
 				86810C0427E123F300DE48A8 /* Pill Assistant */,
 				86810C0327E123F300DE48A8 /* Products */,
+				8632F6D127E29C8E00711B8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
