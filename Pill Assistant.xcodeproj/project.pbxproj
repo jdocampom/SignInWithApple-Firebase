@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8660A2E327E1603F0019698B /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8660A2E227E1603F0019698B /* Buttons.swift */; };
+		8660A2E527E1616B0019698B /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8660A2E427E1616B0019698B /* Labels.swift */; };
+		8660A2E727E162CF0019698B /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8660A2E627E162CF0019698B /* TextFields.swift */; };
+		8660A2E927E164200019698B /* Visuals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8660A2E827E164200019698B /* Visuals.swift */; };
 		86810C0627E123F300DE48A8 /* PillAssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C0527E123F300DE48A8 /* PillAssistantApp.swift */; };
 		86810C0827E123F300DE48A8 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C0727E123F300DE48A8 /* SignUpScreen.swift */; };
 		86810C0A27E123F500DE48A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86810C0927E123F500DE48A8 /* Assets.xcassets */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8660A2E227E1603F0019698B /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		8660A2E427E1616B0019698B /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		8660A2E627E162CF0019698B /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
+		8660A2E827E164200019698B /* Visuals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visuals.swift; sourceTree = "<group>"; };
 		86810C0227E123F300DE48A8 /* Pill Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pill Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86810C0527E123F300DE48A8 /* PillAssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillAssistantApp.swift; sourceTree = "<group>"; };
 		86810C0727E123F300DE48A8 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
@@ -42,6 +50,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8660A2E127E160320019698B /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				8660A2E227E1603F0019698B /* Buttons.swift */,
+				8660A2E427E1616B0019698B /* Labels.swift */,
+				8660A2E627E162CF0019698B /* TextFields.swift */,
+				8660A2E827E164200019698B /* Visuals.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
 		86810BF927E123F300DE48A8 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +80,7 @@
 		86810C0427E123F300DE48A8 /* Pill Assistant */ = {
 			isa = PBXGroup;
 			children = (
+				8660A2E127E160320019698B /* Custom Views */,
 				86810C0527E123F300DE48A8 /* PillAssistantApp.swift */,
 				86810C1C27E14F9600DE48A8 /* SignInScreen.swift */,
 				86810C0727E123F300DE48A8 /* SignUpScreen.swift */,
@@ -154,11 +174,15 @@
 			files = (
 				86810C1927E125F400DE48A8 /* Template.swift in Sources */,
 				86810C0F27E123F500DE48A8 /* Persistence.swift in Sources */,
+				8660A2E527E1616B0019698B /* Labels.swift in Sources */,
 				86810C1227E123F500DE48A8 /* PillAssistant.xcdatamodeld in Sources */,
 				86810C1D27E14F9600DE48A8 /* SignInScreen.swift in Sources */,
+				8660A2E727E162CF0019698B /* TextFields.swift in Sources */,
+				8660A2E927E164200019698B /* Visuals.swift in Sources */,
 				86810C0827E123F300DE48A8 /* SignUpScreen.swift in Sources */,
 				86810C0627E123F300DE48A8 /* PillAssistantApp.swift in Sources */,
 				86810C1B27E13E0000DE48A8 /* Color+Ext.swift in Sources */,
+				8660A2E327E1603F0019698B /* Buttons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

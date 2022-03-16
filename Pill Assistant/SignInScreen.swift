@@ -22,15 +22,15 @@ struct SignInScreen: View {
                     ZStack(alignment: .top) {
                         VStack(alignment: .leading, spacing: 20) {
                             Spacer().frame(height: 48)
-                            SignUpTitle(text: "Sign In")
-                            SignUpLabel(text: "Keep track of your medicine cabinet and never miss a dose again!")
+                            LoginCardTitle(text: "Sign In")
+                            LoginCardLabel(text: "Keep track of your medicine cabinet and never miss a dose again!")
                             EmailTextField(with: $email)
                             PasswordTextField(with: $password)
-                            SignUpButton(action: signInTapped)
-                            HStack { Spacer(); Text("or").opacity(0.85).font(.subheadline) ; Spacer() }
-                            SignInWithAppleButton(action: signInWithAppleTapped)
+                            PAButton(text: "Sign In", action: signInTapped)
+                            LoginDivider()
+                            SignInWithAppleButton(context: .signIn, action: signInWithAppleTapped)
                             Divider()
-                            RedirectToSignUpViewButton(action: redirectToSignUpTapped)
+                            PARedirectButton(label: "Don't have an account?", text: "Sign Up", action: redirectToSignUpTapped)
                         }
                         .padding()
                         .frame(width: UIScreen.main.bounds.width - 32)
@@ -57,43 +57,10 @@ extension SignInScreen {
 struct SignInScreen_Previews: PreviewProvider {
     static var previews: some View {
         SignInScreen()
-    }
-}
-
-struct SignInButton: View {
-    var action: () -> Void
-    var body: some View {
-        HStack {
-            Spacer()
-            Button(action: action) {
-                Text("Sign In").bold()
-                    .padding()
-                    .font(.title3)
-                    .frame(width: 280, height: 44)
-                //                    .frame(width: UIScreen.main.bounds.width - 64, height:  48)
-                    .foregroundColor(Color.white)
-                    .background(Color.red)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-            }
-            Spacer()
-        }
-    }
-}
-
-struct RedirectToSignUpViewButton: View {
-    var action: () -> Void
-    var body: some View {
-        HStack{
-            Spacer()
-            Text("Don't have an account?")
-                .font(.subheadline)
-                .opacity(0.85)
-            Button(action: action) {
-                Text("Sign Up")
-                    .foregroundColor(Color.red)
-                    .font(.subheadline)
-            }
-            Spacer()
-        }
+            .preferredColorScheme(.light)
+            .statusBar(hidden: false)
+        SignInScreen()
+            .preferredColorScheme(.light)
+            .statusBar(hidden: false)
     }
 }
