@@ -32,7 +32,7 @@ extension LoginView {
                 guard error == nil else {
                     let errorMessage =  String(describing: error!.localizedDescription)
                     print("❌ ERROR - LoginViewModel - signUpUser(): \(errorMessage) ❌")
-                    AlertContext.errorCreatingProfile.message = Text("\n\(errorMessage)")
+                    AlertContext.errorCreatingProfile.message = Text("\(errorMessage)")
                     HapticManager.playErrorHaptic()
                     alertItem = AlertContext.errorCreatingProfile
                     return
@@ -48,7 +48,7 @@ extension LoginView {
                 guard error == nil else {
                     let errorMessage =  String(describing: error!.localizedDescription)
                     print("❌ ERROR - LoginViewModel - logInUser(): \(errorMessage) ❌")
-                    AlertContext.errorCreatingProfile.message = Text("\n\(errorMessage)")
+                    AlertContext.errorCreatingProfile.message = Text("\(errorMessage)")
                     HapticManager.playErrorHaptic()
                     alertItem = AlertContext.errorCreatingProfile
                     return
@@ -77,12 +77,12 @@ extension LoginView {
                 guard error == nil else {
                     let errorMessage =  String(describing: error!.localizedDescription)
                     print("❌ ERROR - LoginViewModel - resetPasswordTapped(): \(errorMessage) ❌")
-                    AlertContext.errorSendingRecoveryEmail.message = Text("\n\(errorMessage)")
+                    AlertContext.errorSendingRecoveryEmail.message = Text("\(errorMessage)")
                     HapticManager.playErrorHaptic()
                     alertItem = AlertContext.errorSendingRecoveryEmail
                     return
                 }
-                AlertContext.passwordRecoveryEmailSent.message = Text("\nAn email with instructions to reset your password has been sent to \(self.email). \n\nPlease check your inbox and follow the instructions.")
+                AlertContext.passwordRecoveryEmailSent.message = Text("An email with instructions to reset your password has been sent to \(self.email). \n\nPlease check your inbox and follow the instructions.")
                 HapticManager.playSuccessHaptic()
                 alertItem = AlertContext.passwordRecoveryEmailSent
             }
