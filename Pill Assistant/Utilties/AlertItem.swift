@@ -13,7 +13,7 @@ struct AlertItem: Identifiable {
     
     let id              = UUID()
     let title           : Text
-    let message         : Text
+    var message         : Text
     let dismissButton   : Alert.Button
     
     var alert: Alert {
@@ -25,12 +25,12 @@ struct AlertItem: Identifiable {
 struct AlertContext {
     
     /// Tag: Login View Alerts
-    static let profileCreatedSuccessfully = AlertItem(title: Text("􀁣").font(.largeTitle).foregroundColor(.green),
-                                                      message: Text("Your account has been created successfully."),
-                                                      dismissButton: .default(Text("Dismiss")))
-    /// Tag: MapView Errors
-    static let errorCreatingProfile       = AlertItem(title: Text("􀁡").font(.largeTitle).foregroundColor(.red),
-                                                      message: Text("We were unable to create your account at this time. \n\nPlease try again."),
-                                                      dismissButton: .default(Text("Dismiss")))
+    static let profileCreatedSuccessfully = AlertItem(title: Text("Account Created").font(.title2).bold(),
+                                                      message: Text("\nYour account has been created successfully."),
+                                                      dismissButton: .default(Text("OK")))
+    
+    static var errorCreatingProfile       = AlertItem(title: Text("Error Creating Account").font(.title2).bold(),
+                                                      message: Text("\nWe were unable to create your account at this time. \n\nPlease try again."),
+                                                      dismissButton: .default(Text("OK")))
 
 }

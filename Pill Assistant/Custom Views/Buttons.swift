@@ -33,8 +33,28 @@ struct PAButton: View {
     }
 }
 
-struct PARedirectButton: View {
+struct PALoginButton: View {
     private let generator = UISelectionFeedbackGenerator()
+    var text: String
+    var action: () -> Void
+    var body: some View {
+        HStack {
+            Spacer()
+            Button(action: action) {
+                Text(text).bold()
+                    .padding()
+                    .font(.title3)
+                    .frame(width: 280, height: 44)
+                    .foregroundColor(Color.white)
+                    .background(Color.red)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+            }
+            Spacer()
+        }
+    }
+}
+
+struct PARedirectButton: View {
     var label: String
     var text: String
     var action: () -> Void
@@ -48,8 +68,24 @@ struct PARedirectButton: View {
                 Text(text)
                     .foregroundColor(Color.red)
                     .font(.subheadline)
-                    .onTapGesture { generator.selectionChanged() }
             }
+            Spacer()
+        }
+    }
+}
+
+struct LoginButton: View {
+    var label: String
+    var body: some View {
+        HStack {
+            Spacer()
+            Text(label).bold()
+                .padding()
+                .font(.title3)
+                .frame(width: 280, height: 44)
+                .foregroundColor(Color.white)
+                .background(Color.red)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             Spacer()
         }
     }
