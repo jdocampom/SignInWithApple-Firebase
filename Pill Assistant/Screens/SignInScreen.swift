@@ -25,7 +25,6 @@ struct SignInScreen: View {
                         VStack(alignment: .leading, spacing: 20) {
                             Spacer().frame(height: 48)
                             LoginCardTitle(text: "Sign In")
-                            LoginCardLabel(text: "Keep track of your medicine cabinet and never miss a dose again!")
                             EmailTextField(with: $email)
                             PasswordTextField(with: $password)
                             PAButton(text: "Sign In", action: signInTapped)
