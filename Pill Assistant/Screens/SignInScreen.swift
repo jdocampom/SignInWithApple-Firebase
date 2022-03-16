@@ -8,6 +8,8 @@
 import SwiftUI
 import CoreData
 
+/// MARK: - SignInScreen - Main SwiftUI View
+
 struct SignInScreen: View {
     
     @State private var email: String = ""
@@ -48,11 +50,15 @@ struct SignInScreen: View {
     }
 }
 
+/// MARK: - SignInScreen Methods
+
 extension SignInScreen {
     func signInTapped() { print("signInTapped") }
     func signInWithAppleTapped() { print("signInWithAppleTapped") }
     func redirectToSignUpTapped() { print("redirectToSignUpTapped") }
 }
+
+/// MARK: - SwiftUI Previews
 
 struct SignInScreen_Previews: PreviewProvider {
     static var previews: some View {

@@ -75,6 +75,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		8660A2EF27E176370019698B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				86810C1C27E14F9600DE48A8 /* SignInScreen.swift */,
+				86810C0727E123F300DE48A8 /* SignUpScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		86810BF927E123F300DE48A8 = {
 			isa = PBXGroup;
 			children = (
@@ -94,15 +103,14 @@
 		86810C0427E123F300DE48A8 /* Pill Assistant */ = {
 			isa = PBXGroup;
 			children = (
-				8660A2E127E160320019698B /* Custom Views */,
 				86810C0527E123F300DE48A8 /* PillAssistantApp.swift */,
-				86810C1C27E14F9600DE48A8 /* SignInScreen.swift */,
-				86810C0727E123F300DE48A8 /* SignUpScreen.swift */,
-				86810C0927E123F500DE48A8 /* Assets.xcassets */,
 				86810C0E27E123F500DE48A8 /* Persistence.swift */,
-				86810C1027E123F500DE48A8 /* PillAssistant.xcdatamodeld */,
-				86810C0B27E123F500DE48A8 /* Preview Content */,
 				86810C1827E125F400DE48A8 /* Template.swift */,
+				86810C0927E123F500DE48A8 /* Assets.xcassets */,
+				86810C1027E123F500DE48A8 /* PillAssistant.xcdatamodeld */,
+				8660A2E127E160320019698B /* Custom Views */,
+				8660A2EF27E176370019698B /* Screens */,
+				86810C0B27E123F500DE48A8 /* Preview Content */,
 				8660A2EA27E167790019698B /* Extensions */,
 			);
 			path = "Pill Assistant";

@@ -72,6 +72,8 @@ struct SignInWithAppleButton: View {
     }
 }
 
+/// MARK: - SwiftUI Previews
+
 struct Buttons_Previews: PreviewProvider {
     static var previews: some View {
         PAButton(text: "Button", action: {}).fitPreviewOnLightMode()

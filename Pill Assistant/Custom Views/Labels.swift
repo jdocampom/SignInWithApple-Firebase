@@ -42,6 +42,8 @@ struct LoginDivider: View {
     }
 }
 
+/// MARK: - SwiftUI Previews
+
 struct LoginDivider_Previews: PreviewProvider {
     static var previews: some View {
         LoginCardTitle(text: "Title").fitPreviewOnLightMode()

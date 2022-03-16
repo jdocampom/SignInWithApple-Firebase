@@ -20,7 +20,11 @@ struct EmailTextField: View {
         .frame(height: 48)
         .padding(.leading)
     }
-    init(with: Binding<String>) { self._email = with }
+    
+    init(with: Binding<String>) {
+        self._email = with
+    }
+    
 }
 
 struct PasswordTextField: View {
@@ -36,8 +40,14 @@ struct PasswordTextField: View {
         .frame(height: 48)
         .padding(.leading)
     }
-    init(with: Binding<String>) { self._password = with }
+    
+    init(with: Binding<String>) {
+        self._password = with
+    }
+    
 }
+
+/// MARK: - SwiftUI Previews
 
 struct TextFields_Previews: PreviewProvider {
     static var previews: some View {

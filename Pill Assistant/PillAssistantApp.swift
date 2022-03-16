@@ -10,7 +10,6 @@ import SwiftUI
 @main
 struct Pill_AssistantApp: App {
     let persistenceController = PersistenceController.shared
-
     var body: some Scene {
         WindowGroup {
             SignUpScreen()

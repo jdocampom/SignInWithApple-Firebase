@@ -27,26 +27,17 @@ struct GradientBackground: View {
     }
 }
 
+/// MARK: - SwiftUI Previews
+
 struct Visuals_Previews: PreviewProvider {
     static var previews: some View {
-        OverlayedAppIcon()
-            .padding()
+        OverlayedAppIcon().fitPreviewOnLightMode()
             .offset(y:64)
             .previewLayout(.fixed(width: 150, height: 150))
-            .preferredColorScheme(.light)
-        OverlayedAppIcon()
-            .padding()
+        OverlayedAppIcon().fitPreviewOnDarkMode()
             .offset(y:64)
             .previewLayout(.fixed(width: 150, height: 150))
-            .preferredColorScheme(.dark)
-        GradientBackground()
-            .padding()
-            .previewLayout(.sizeThatFits)
-            .preferredColorScheme(.light)
-        GradientBackground()
-            .padding()
-            .previewLayout(.sizeThatFits)
-            .preferredColorScheme(.dark)
-        
+        GradientBackground().fitPreviewOnLightMode()
+        GradientBackground().fitPreviewOnDarkMode()
     }
 }
