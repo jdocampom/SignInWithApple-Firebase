@@ -20,7 +20,7 @@ struct SignUpScreen: View {
         ZStack(alignment: .center) {
             GradientBackground()
             ZStack(alignment: .top) {
-                VStack(alignment: .leading, spacing: 20) {
+                VStack(alignment: .leading, spacing: 10) {
                     Spacer().frame(height: 48)
                     LoginCardTitle(text: "Sign Up")
                     LoginCardLabel(text: "Keep track of your medicine cabinet and never miss a dose again!")

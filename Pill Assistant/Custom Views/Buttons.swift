@@ -12,6 +12,7 @@ enum SignInWithAppleButtonContext {
 }
 
 struct PAButton: View {
+    private let generator = UISelectionFeedbackGenerator()
     var text: String
     var action: () -> Void
     var body: some View {
@@ -25,6 +26,7 @@ struct PAButton: View {
                     .foregroundColor(Color.white)
                     .background(Color.red)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .onTapGesture { generator.selectionChanged() }
             }
             Spacer()
         }
@@ -32,6 +34,7 @@ struct PAButton: View {
 }
 
 struct PARedirectButton: View {
+    private let generator = UISelectionFeedbackGenerator()
     var label: String
     var text: String
     var action: () -> Void
@@ -45,6 +48,7 @@ struct PARedirectButton: View {
                 Text(text)
                     .foregroundColor(Color.red)
                     .font(.subheadline)
+                    .onTapGesture { generator.selectionChanged() }
             }
             Spacer()
         }
@@ -52,6 +56,7 @@ struct PARedirectButton: View {
 }
 
 struct SignInWithAppleButton: View {
+    private let generator = UISelectionFeedbackGenerator()
     @Environment(\.colorScheme) var colorScheme
     var context: SignInWithAppleButtonContext
     var action: () -> Void
@@ -66,6 +71,7 @@ struct SignInWithAppleButton: View {
                     .foregroundColor(colorScheme == .light ? Color.white: Color.black)
                     .background(colorScheme == .light ? Color.black: Color.white)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .onTapGesture { generator.selectionChanged() }
             }
             Spacer()
         }

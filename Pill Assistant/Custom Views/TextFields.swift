@@ -9,13 +9,20 @@ import SwiftUI
 
 struct EmailTextField: View {
     @Binding var email: String
+    private let generator = UISelectionFeedbackGenerator()
     var body: some View {
         HStack(spacing: 12) {
-            Image(systemName: "envelope.open.fill")
+            HStack {
+                Spacer()
+                Image(systemName: "envelope.open.fill")
+                Spacer()
+            }
+            .frame(width: 21)
             TextField("Email Address", text: $email)
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
                 .textContentType(.emailAddress)
+                .onTapGesture { generator.selectionChanged() }
         }
         .frame(height: 48)
         .padding(.leading)
@@ -29,13 +36,20 @@ struct EmailTextField: View {
 
 struct PasswordTextField: View {
     @Binding var password: String
+    private let generator = UISelectionFeedbackGenerator()
     var body: some View {
         HStack(spacing: 12) {
-            Image(systemName: "key.fill")
+            HStack {
+                Spacer()
+                Image(systemName: "key.fill")
+                Spacer()
+            }
+            .frame(width: 21)
             SecureField("Password", text: $password)
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
                 .textContentType(.password)
+                .onTapGesture { generator.selectionChanged() }
         }
         .frame(height: 48)
         .padding(.leading)

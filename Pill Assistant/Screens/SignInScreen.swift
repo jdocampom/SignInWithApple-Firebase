@@ -15,6 +15,8 @@ struct SignInScreen: View {
     @State private var email: String = ""
     @State private var password: String = ""
     
+    @State private var isShowingAlert = false
+        
     var body: some View {
         Group {
             VStack {
@@ -22,7 +24,7 @@ struct SignInScreen: View {
                 ZStack {
                     GradientBackground()
                     ZStack(alignment: .top) {
-                        VStack(alignment: .leading, spacing: 20) {
+                        VStack(alignment: .leading, spacing: 10) {
                             Spacer().frame(height: 48)
                             LoginCardTitle(text: "Sign In")
                             EmailTextField(with: $email)
