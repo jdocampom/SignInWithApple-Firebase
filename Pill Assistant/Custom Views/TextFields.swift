@@ -41,21 +41,9 @@ struct PasswordTextField: View {
 
 struct TextFields_Previews: PreviewProvider {
     static var previews: some View {
-        EmailTextField(with: .constant("Email"))
-            .padding()
-            .previewLayout(.sizeThatFits)
-            .preferredColorScheme(.light)
-        EmailTextField(with: .constant("Email"))
-            .padding()
-            .previewLayout(.sizeThatFits)
-            .preferredColorScheme(.dark)
-        PasswordTextField(with: .constant("Password"))
-            .padding()
-            .previewLayout(.sizeThatFits)
-            .preferredColorScheme(.light)
-        EmailTextField(with: .constant("Email"))
-            .padding()
-            .previewLayout(.sizeThatFits)
-            .preferredColorScheme(.dark)
+        EmailTextField(with: .constant("Email")).fitPreviewOnLightMode()
+        EmailTextField(with: .constant("Email")).fitPreviewOnDarkMode()
+        PasswordTextField(with: .constant("Password")).fitPreviewOnLightMode()
+        PasswordTextField(with: .constant("Password")).fitPreviewOnDarkMode()
     }
 }

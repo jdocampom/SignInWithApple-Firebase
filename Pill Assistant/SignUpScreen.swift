@@ -14,6 +14,7 @@ struct SignUpScreen: View {
     @State private var password: String = ""
     
     var body: some View {
+        
         ZStack(alignment: .center) {
             GradientBackground()
             ZStack(alignment: .top) {
@@ -41,10 +42,11 @@ struct SignUpScreen: View {
     }
 }
 
+
 extension SignUpScreen {
     func signUpTapped() { print("signUpTapped") }
     func signUpWithAppleTapped() { print("signUpWithAppleTapped") }
-    func redirectToSignInTapped() { SignInScreen() }
+    func redirectToSignInTapped() { print("redirectToSignInTapped") }
 }
 
 struct ContentView_Previews: PreviewProvider {

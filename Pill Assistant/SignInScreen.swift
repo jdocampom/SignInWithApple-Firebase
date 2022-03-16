@@ -51,7 +51,7 @@ struct SignInScreen: View {
 extension SignInScreen {
     func signInTapped() { print("signInTapped") }
     func signInWithAppleTapped() { print("signInWithAppleTapped") }
-    func redirectToSignUpTapped() { SignUpScreen() }
+    func redirectToSignUpTapped() { print("redirectToSignUpTapped") }
 }
 
 struct SignInScreen_Previews: PreviewProvider {
