@@ -40,7 +40,7 @@ struct LoginView: View {
                         HStack {
                             Spacer()
                             Button {
-                                viewModel.showingSignUpScreen ? viewModel.signUpWithAppleTapped() : viewModel.signInWithAppleTapped()
+                                viewModel.signInWithAppleTapped()
                             } label: {
                                 SignInWithAppleButtonView(appearance: colorScheme)
                             }

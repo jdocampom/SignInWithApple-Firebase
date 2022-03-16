@@ -58,6 +58,10 @@ extension LoginView {
             }
         }
         
+        internal func signInWithAppleTapped() {
+            signInWithAppleManager.signInWithApple()
+        }
+        
         internal func checkForActiveSession() {
             Auth.auth().addStateDidChangeListener { [self] auth, user in
                 if user != nil {
@@ -68,9 +72,21 @@ extension LoginView {
             }
         }
         
-        internal func signUpWithAppleTapped() { signInWithAppleManager.signInWithApple() }
-        internal func signInWithAppleTapped() { signInWithAppleManager.signInWithApple() }
-        internal func resetPasswordTapped() { print("resetPasswordTapped") }
+        internal func resetPasswordTapped() {
+            Auth.auth().sendPasswordReset(withEmail: self.email) { [self] error in
+                guard error == nil else {
+                    let errorMessage =  String(describing: error!.localizedDescription)
+                    print("❌ ERROR - LoginViewModel - resetPasswordTapped(): \(errorMessage) ❌")
+                    AlertContext.errorSendingRecoveryEmail.message = Text("\n\(errorMessage)")
+                    HapticManager.playErrorHaptic()
+                    alertItem = AlertContext.errorSendingRecoveryEmail
+                    return
+                }
+                AlertContext.passwordRecoveryEmailSent.message = Text("\nAn email with instructions to reset your password has been sent to \(self.email). \n\nPlease check your inbox and follow the instructions.")
+                HapticManager.playSuccessHaptic()
+                alertItem = AlertContext.passwordRecoveryEmailSent
+            }
+        }
         
     }
     
