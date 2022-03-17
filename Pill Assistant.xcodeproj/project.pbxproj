@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		860F5AF327E39D8F0064E163 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F5AF227E39D8F0064E163 /* String+Ext.swift */; };
 		8632F6B827E22DD600711B8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8632F6B727E22DD600711B8E /* GoogleService-Info.plist */; };
 		8632F6BB27E22F3100711B8E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8632F6BA27E22F3100711B8E /* FirebaseAuth */; };
 		8632F6BD27E2327000711B8E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8632F6BC27E2327000711B8E /* User.swift */; };
@@ -31,9 +32,12 @@
 		86810C1227E123F500DE48A8 /* PillAssistant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86810C1027E123F500DE48A8 /* PillAssistant.xcdatamodeld */; };
 		86810C1927E125F400DE48A8 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C1827E125F400DE48A8 /* Template.swift */; };
 		86810C1B27E13E0000DE48A8 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86810C1A27E13E0000DE48A8 /* Color+Ext.swift */; };
+		869972A027E3699D00ABC4D3 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699729F27E3699D00ABC4D3 /* AppTabView.swift */; };
+		869972A227E369D800ABC4D3 /* AppTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869972A127E369D800ABC4D3 /* AppTabViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		860F5AF227E39D8F0064E163 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		8632F6B727E22DD600711B8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8632F6BC27E2327000711B8E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8632F6C027E232F300711B8E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		86810C1127E123F500DE48A8 /* Pill_Assistant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pill_Assistant.xcdatamodel; sourceTree = "<group>"; };
 		86810C1827E125F400DE48A8 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		86810C1A27E13E0000DE48A8 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		8699729F27E3699D00ABC4D3 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		869972A127E369D800ABC4D3 /* AppTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 				86810C1A27E13E0000DE48A8 /* Color+Ext.swift */,
 				8660A2EB27E16FA80019698B /* View+Ext.swift */,
 				8660A2ED27E16FF10019698B /* CustomModifiers.swift */,
+				860F5AF227E39D8F0064E163 /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -124,6 +131,8 @@
 		8660A2EF27E176370019698B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				8699729F27E3699D00ABC4D3 /* AppTabView.swift */,
+				869972A127E369D800ABC4D3 /* AppTabViewModel.swift */,
 				8632F6BF27E232CE00711B8E /* LoginView */,
 			);
 			path = Screens;
@@ -272,12 +281,15 @@
 				8660A2E927E164200019698B /* Visuals.swift in Sources */,
 				8660A2F227E204040019698B /* AlertItem.swift in Sources */,
 				8632F6C327E2365300711B8E /* HapticsManager.swift in Sources */,
+				869972A027E3699D00ABC4D3 /* AppTabView.swift in Sources */,
 				8632F6C127E232F300711B8E /* LoginViewModel.swift in Sources */,
 				86810C0827E123F300DE48A8 /* LoginView.swift in Sources */,
 				8632F6BD27E2327000711B8E /* User.swift in Sources */,
 				8660A2EE27E16FF10019698B /* CustomModifiers.swift in Sources */,
 				8660A2EC27E16FA80019698B /* View+Ext.swift in Sources */,
+				860F5AF327E39D8F0064E163 /* String+Ext.swift in Sources */,
 				86810C0627E123F300DE48A8 /* PillAssistantApp.swift in Sources */,
+				869972A227E369D800ABC4D3 /* AppTabViewModel.swift in Sources */,
 				86810C1B27E13E0000DE48A8 /* Color+Ext.swift in Sources */,
 				8632F6CD27E284A500711B8E /* SignInWithApple.swift in Sources */,
 				8660A2E327E1603F0019698B /* Buttons.swift in Sources */,

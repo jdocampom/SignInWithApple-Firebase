@@ -52,9 +52,11 @@ struct LoginView: View {
                             Spacer().frame(height: 6)
                         }
                         PARedirectButton(label: viewModel.showingSignUpScreen ? "Already have an account?" : "Don't have an account?", text: viewModel.showingSignUpScreen ? "Log In" : "Register") {
-                            withAnimation(.linear(duration: 0.75)) {
+                        
+                            withAnimation(.linear(duration: 0.5)) {
                                 viewModel.showingSignUpScreen.toggle()
                                 viewModel.rotationAngle += 180
+
                             }
                         }
                     }
@@ -71,8 +73,8 @@ struct LoginView: View {
             }
         }
         .alert(item: $viewModel.alertItem, content: { $0.alert })
-        .fullScreenCover(isPresented: $viewModel.redirectToHomeScreen) { TestScreen() }
-        .onAppear(perform: viewModel.checkForActiveSession)
+//        .fullScreenCover(isPresented: $viewModel.redirectToHomeScreen) { TestScreen() }
+//        .onAppear(perform: viewModel.checkForActiveSession)
     }
 }
 

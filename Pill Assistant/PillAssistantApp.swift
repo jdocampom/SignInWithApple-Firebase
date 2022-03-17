@@ -14,7 +14,7 @@ struct PillAssistantApp: App {
     let persistenceController = PersistenceController.shared
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            AppTabView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
